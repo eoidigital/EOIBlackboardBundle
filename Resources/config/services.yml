@@ -1,0 +1,21 @@
+services:
+    eoi_blackboard.server:
+        class: EOI\BlackboardBundle\Services\Server
+        arguments:
+          - @besimple.soap.client.contextapi
+          - %eoi_blackboard.proxy_tool%
+
+    eoi_blackboard.wslocator.user:
+        class: EOI\BlackboardBundle\Services\UserWSLocator
+        arguments:
+          - @besimple.soap.client.userapi
+          - @eoi_blackboard.server
+
+    eoi_blackboard.ws.user:
+        class: EOI\BlackboardBundle\Services\UserWS
+        arguments:
+          - @eoi_blackboard.wslocator.user
+
+
+
+

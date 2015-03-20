@@ -1,0 +1,27 @@
+/web/bundles/
+/app/config/parameters.yml
+/var/bootstrap.php.cache
+/var/cache/*
+/var/logs/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+/build/
+/vendor/
+/bin/*
+!bin/console
+!bin/symfony_requirements
+/composer.phar
+.idea/*
+#netbeans specific
+/nbproject/
+core
+/nbproject/*
+!nbproject/project.properties
+!nbproject/project.xml
+#doctrine entities generation backup
+*.php~
+.buildpath
+.project
+.settings/
+#p12 certificate files
+*.p12

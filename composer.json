@@ -1,0 +1,42 @@
+{
+  "name": "eoidigital/eoi-blackboard-bundle",
+  "type": "symfony-bundle",
+  "description": "A Symfony2 Wrapper for the Blackboard's SOAP Web Service API",
+  "keywords": ["Blackboard API"],
+  "homepage": "https://github.com/eoidigital/EOIBlackboardBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jon González Guerra",
+      "email": "jon.gonzalez@live.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "symfony/framework-bundle": "2.*",
+    "symfony/yaml": "2.*",
+    "besimple/soap-common":   "dev-master",
+    "besimple/soap-wsdl":     "dev-master",
+    "besimple/soap-bundle":   "dev-master",
+    "besimple/soap-client":   "dev-master",
+    "ass/xmlsecurity": "dev-master"
+  },
+  "require-dev": {
+    "mockery/mockery": "*"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/jon-gonzalez/BeSimpleSoapCommon.git"
+    }
+  ],
+  "autoload": {
+    "psr-0": { "EOI\\BlackboardBundle": "" }
+  },
+  "target-dir": "EOI/BlackboardBundle",
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
