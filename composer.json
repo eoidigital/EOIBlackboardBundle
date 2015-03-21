@@ -16,10 +16,8 @@
     "symfony/framework-bundle": "2.*",
     "symfony/yaml": "2.*",
     "besimple/soap-common": "dev-master",
-    "besimple/soap-wsdl": "dev-master",
-    "besimple/soap-bundle": "dev-master",
     "besimple/soap-client": "dev-master",
-    "ass/xmlsecurity": "dev-master"
+    "besimple/soap-bundle": "dev-master"
   },
   "require-dev": {
     "mockery/mockery": "*"
