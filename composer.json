@@ -19,6 +19,9 @@
     "besimple/soap-client": "dev-master",
     "besimple/soap-bundle": "dev-master"
   },
+  "replace": {
+    "besimple/soap-common": "self.version"
+  },
   "require-dev": {
     "mockery/mockery": "*"
   },
