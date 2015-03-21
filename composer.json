@@ -11,6 +11,7 @@
       "email": "jon.gonzalez@live.com"
     }
   ],
+  "minimum-stability": "dev",
   "require": {
     "php": ">=5.3.2",
     "symfony/framework-bundle": "2.*",
@@ -18,9 +19,6 @@
     "besimple/soap-common": "dev-master",
     "besimple/soap-client": "dev-master",
     "besimple/soap-bundle": "dev-master"
-  },
-  "replace": {
-    "besimple/soap-common": "self.version"
   },
   "require-dev": {
     "mockery/mockery": "*"
