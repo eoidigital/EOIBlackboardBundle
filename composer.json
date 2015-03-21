@@ -14,15 +14,15 @@
   "require": {
     "php": ">=5.3.2",
     "symfony/framework-bundle": "2.*",
-    "symfony/yaml": "2.*"
-  },
-  "require-dev": {
-    "mockery/mockery": "*",
+    "symfony/yaml": "2.*",
     "besimple/soap-common": "dev-master",
     "besimple/soap-wsdl": "dev-master",
     "besimple/soap-bundle": "dev-master",
     "besimple/soap-client": "dev-master",
     "ass/xmlsecurity": "dev-master"
+  },
+  "require-dev": {
+    "mockery/mockery": "*"
   },
   "repositories": [
     {
