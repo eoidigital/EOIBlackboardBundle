@@ -38,4 +38,14 @@ class UserWS
 
         return $client->saveUser($userVO);
     }
+
+    public function deleteUser($userId) {
+        $client = $this->wsLocator->getClient();
+
+        $data = [
+            "userId" => $userId
+        ];
+
+        return $client->deleteUser($data);
+    }
 }
