@@ -21,16 +21,42 @@ class CourseMembershipWS
         $this->wsLocator = $wsLocator;
     }
 
+    public function getCourseMembership($courseId, $userId, $filterType = 6) {
+        $client = $this->wsLocator->getClient();
+
+        $data = [
+            'courseId' => $courseId,
+            "f" => [
+                'filterType' => $filterType,
+                'userIds' => $userId,
+                'courseIds' => $courseId,
+            ]
+        ];
+
+        return $client->getCourseMembership($data);
+    }
+
     public function saveCourseMembership($courseId, CourseMembershipVO $courseMembershipVO) {
         $client = $this->wsLocator->getClient();
 
         $enrollData = [
             'courseId' => $courseId,
             "cmArray" => [
-                    $courseMembershipVO
+                $courseMembershipVO
             ]
         ];
 
         return $client->saveCourseMembership($enrollData);
+    }
+
+    public function deleteCourseMembership($courseId, $ids) {
+        $client = $this->wsLocator->getClient();
+
+        $data = [
+            'courseId' => $courseId,
+            "ids" => $ids,
+        ];
+
+        return $client->deleteCourseMembership($data);
     }
 }
