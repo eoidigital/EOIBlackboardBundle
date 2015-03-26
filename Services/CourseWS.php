@@ -3,13 +3,13 @@
 namespace EOI\BlackboardBundle\Services;
 
 /**
- * UserWS
+ * CourseWS
  *
  * @author Jon González <jon.gonzalez@eoi.es>
  *
  * @copyright 2015 Fundación EOI.
  */
-class UserWS
+class CourseWS
 {
     private $wsLocator;
 
@@ -19,23 +19,16 @@ class UserWS
         $this->wsLocator = $wsLocator;
     }
 
-    public function getUser($username, $filterType = 6, $available = true) {
+    public function getCourse($eoiCourseId, $filterType = 1, $available = true) {
         $client = $this->wsLocator->getClient();
-        $user =  [
-            "name" => $username,
+        $course = [
             "filter"=> [
                 "filterType"=> $filterType,
-                "name"=> $username,
-                "available" => $available
+                'courseIds'=> $eoiCourseId,
+                'available' => $available
             ]
         ];
 
-        return $client->getUser($user);
-    }
-
-    public function saveUser($userVO) {
-        $client = $this->wsLocator->getClient();
-
-        return $client->saveUser($userVO);
+        return $client->getCourse($course);
     }
 }

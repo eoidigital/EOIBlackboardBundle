@@ -6,15 +6,26 @@ services:
           - %eoi_blackboard.proxy_tool%
 
     eoi_blackboard.wslocator.user:
-        class: EOI\BlackboardBundle\Services\UserWSLocator
+        class: EOI\BlackboardBundle\Services\WSLocator
         arguments:
           - @besimple.soap.client.userapi
+          - @eoi_blackboard.server
+
+    eoi_blackboard.wslocator.course:
+        class: EOI\BlackboardBundle\Services\WSLocator
+        arguments:
+          - @besimple.soap.client.courseapi
           - @eoi_blackboard.server
 
     eoi_blackboard.ws.user:
         class: EOI\BlackboardBundle\Services\UserWS
         arguments:
           - @eoi_blackboard.wslocator.user
+
+    eoi_blackboard.ws.course:
+        class: EOI\BlackboardBundle\Services\CourseWS
+        arguments:
+          - @eoi_blackboard.wslocator.course
 
 
 

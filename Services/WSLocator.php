@@ -6,13 +6,13 @@ use BeSimple\SoapClient\SoapClient;
 use BeSimple\SoapClient\WsSecurityFilter as BeSimpleWsSecurityFilter;
 
 /**
- * UserWSLocator
+ * WSLocator
  *
  * @author Jon González <jon.gonzalez@eoi.es>
  *
  * @copyright 2015 Fundación EOI.
  */
-class UserWSLocator
+class WSLocator
 {
     private $client;
     private $server;

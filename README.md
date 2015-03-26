@@ -76,6 +76,10 @@ be_simple_soap:
             classmap:
                 UserVO: EOI\BlackboardBundle\VO\UserVO
                 UserExtendedInfoVO: EOI\BlackboardBundle\VO\UserExtendedInfoVO
+        CourseApi:
+            wsdl: https://your.blackboard.domain/webapps/ws/services/Course.WS?wsdl
+            classmap:
+                CourseVO: EOI\BlackboardBundle\VO\CourseVO
         ContextApi:
             wsdl: https://your.blackboard.domain/webapps/ws/services/Context.WS?wsdl
 ```
