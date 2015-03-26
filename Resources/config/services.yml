@@ -17,6 +17,12 @@ services:
           - @besimple.soap.client.courseapi
           - @eoi_blackboard.server
 
+    eoi_blackboard.wslocator.course_membership:
+        class: EOI\BlackboardBundle\Services\WSLocator
+        arguments:
+          - @besimple.soap.client.coursemembershipapi
+          - @eoi_blackboard.server
+
     eoi_blackboard.ws.user:
         class: EOI\BlackboardBundle\Services\UserWS
         arguments:
@@ -27,6 +33,9 @@ services:
         arguments:
           - @eoi_blackboard.wslocator.course
 
-
+    eoi_blackboard.ws.course_membership:
+        class: EOI\BlackboardBundle\Services\CourseMembershipWS
+        arguments:
+          - @eoi_blackboard.wslocator.course_membership
 
 

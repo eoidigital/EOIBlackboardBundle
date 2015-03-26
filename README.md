@@ -71,6 +71,8 @@ eoi_blackboard:
 # You can get these parameters from your Blackboard Admin Panel > Building Blocks > Web Services"
 be_simple_soap:
     clients:
+        ContextApi:
+            wsdl: https://your.blackboard.domain/webapps/ws/services/Context.WS?wsdl
         UserApi:
             wsdl: https://your.blackboard.domain/webapps/ws/services/User.WS?wsdl
             classmap:
@@ -80,8 +82,10 @@ be_simple_soap:
             wsdl: https://your.blackboard.domain/webapps/ws/services/Course.WS?wsdl
             classmap:
                 CourseVO: EOI\BlackboardBundle\VO\CourseVO
-        ContextApi:
-            wsdl: https://your.blackboard.domain/webapps/ws/services/Context.WS?wsdl
+        CourseMembershipApi:
+            wsdl: https://https://your.blackboard.domain/webapps/ws/services/CourseMembership.WS?wsdl
+            classmap:
+                CourseVO: EOI\BlackboardBundle\VO\CourseMembershipVO
 ```
 
 LEGAL DISCLAIMER
